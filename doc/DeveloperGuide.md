@@ -45,6 +45,7 @@ Priority | As a ... | I want to ... | So that I can...
 `* * *` | user | add a new person |
 `* * *` | user | delete a person | remove entries that I no longer need
 `* * *` | user | find a person by name | locate details of persons without having to go through the entire list
+`* * *` | user | list all my contacts | have an overview of all my contacts
 `* *` | user | hide [private contact details](#private-contact-detail) by default | to minimize chance of someone else seeing them by accident
 `*` | user with many persons in the address book | sort persons by name | locate a person easily
 
@@ -52,6 +53,21 @@ Priority | As a ... | I want to ... | So that I can...
 ## Appendix B : Use Cases
 
 (For all use cases below, the **System** is the `AddressBook` and the **Actor** is the `user`, unless specified otherwise)
+
+#### Use case: Add person
+
+**MSS**
+
+1. User requests to add a person with specific details
+2. AddressBook adds the person
+Use case ends.
+
+**Extensions**
+
+2a. Invalid command format
+
+> 2a1. AddressBook shows an error message and the correct format <br>
+  Use case ends
 
 #### Use case: Delete person
 
@@ -80,6 +96,7 @@ Use case ends.
 2. Should be able to hold up to 1000 persons.
 3. Should come with automated unit tests and open source code.
 4. Should favor DOS style commands over Unix-style commands.
+5. Should display response within 2 seconds.
 
 ## Appendix D : Glossary
 
