@@ -54,6 +54,34 @@ Priority | As a ... | I want to ... | So that I can...
 
 (For all use cases below, the **System** is the `AddressBook` and the **Actor** is the `user`, unless specified otherwise)
 
+#### Use case: Edit Tag
+
+**MSS**
+
+1. User requests list persons
+2. AddressBook shows a list of persons
+3. User request to edit a specific person in the list
+4. AddressBook display the details of the person
+5. User request to edit a specific tag of the person
+6. AddressBook edits the person and display the edited person
+Use case ends.
+
+**Extensions**
+
+2a. The list is empty
+
+> Use case ends
+
+3a. The given index is invalid
+
+> 3a1. AddressBook shows an error message <br>
+  Use case resumes at step 2
+
+5a. The given tag is invalid
+
+> 5a1. AddressBook shows an error message <br>
+  Use case resumes at step 4
+
 #### Use case: Add person
 
 **MSS**
