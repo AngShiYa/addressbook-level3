@@ -7,6 +7,7 @@ import seedu.addressbook.data.person.ReadOnlyPerson;
 import seedu.addressbook.parser.Parser;
 import seedu.addressbook.storage.Storage;
 import seedu.addressbook.storage.StorageFile;
+import seedu.addressbook.storage.StorageStub;
 
 import java.util.Collections;
 import java.util.List;
@@ -29,12 +30,12 @@ public class Logic {
         setAddressBook(storage.load());
     }
 
-    Logic(StorageFile storageFile, AddressBook addressBook){
+    Logic(Storage storageFile, AddressBook addressBook){
         setStorage(storageFile);
         setAddressBook(addressBook);
     }
 
-    void setStorage(StorageFile storage){
+    void setStorage(Storage storage){
         this.storage = storage;
     }
 
